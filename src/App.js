@@ -11,15 +11,15 @@ import Topics from './pages/Topics';
 import Users from './pages/Users';
 
 function App() {
-  let navigate = useNavigate();
-  navigate('/home');
+  /* let navigate = useNavigate();
+  navigate('/home'); */
 
   return (
     <div className="App">
       <Routes>
         <Route path='/articles' element={<Articles />}/>
         <Route path='/dashboard' element={<Dashboard />}/>
-        <Route path='/home' element={<Home />}/>
+        <Route path='/' element={<Home />}/>
         <Route path='/articles/:article_id' element={<IndividualArticle />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/users/:username' element={<ProfileById />}/>
