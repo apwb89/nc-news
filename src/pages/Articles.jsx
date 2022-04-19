@@ -3,9 +3,8 @@ import ArticlesPanel from '../sub-components/ArticlesPanel'
 
 const Articles = () => {
     return (
-        <section>
-            <h1>Articles Page</h1>
-            <NavBar />
+        <section className='articles-page'>
+            <h1>Articles</h1>
             <ArticlesPanel />
         </section>
     )   

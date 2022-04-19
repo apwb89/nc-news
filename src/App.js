@@ -1,6 +1,6 @@
 import './App.css';
-import { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Articles from './pages/Articles';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
@@ -9,22 +9,28 @@ import Login from './pages/Login';
 import ProfileById from './pages/ProfileById';
 import Topics from './pages/Topics';
 import Users from './pages/Users';
+import NavBar from './sub-components/NavBar';
 
 function App() {
-  /* let navigate = useNavigate();
-  navigate('/home'); */
-
+  
   return (
-    <div className="App">
+    <div className='App'>
+      <NavBar />
       <Routes>
-        <Route path='/articles' element={<Articles />}/>
-        <Route path='/dashboard' element={<Dashboard />}/>
-        <Route path='/' element={<Home />}/>
-        <Route path='/articles/:article_id' element={<IndividualArticle />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/users/:username' element={<ProfileById />}/>
-        <Route path='/topics' element={<Topics />}/>
-        <Route path='/users' element={<Users />}/>
+        <Route path='/articles' element={<Articles className='page' />} />
+        <Route path='/dashboard' element={<Dashboard className='page' />} />
+        <Route
+          path='/articles/:article_id'
+          element={<IndividualArticle className='page' />}
+        />
+        <Route path='/login' element={<Login className='page' />} />
+        <Route
+          path='/users/:username'
+          element={<ProfileById className='page' />}
+        />
+        <Route path='/topics' element={<Topics className='page' />} />
+        <Route path='/users' element={<Users className='page' />} />
+        <Route path='/' element={<Home />} />
       </Routes>
     </div>
   );

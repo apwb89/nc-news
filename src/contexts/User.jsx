@@ -1,11 +1,10 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
     const [ user, setUser ] = useState('');
-
-    const isLoggedIn = user.username !== undefined;
+    let isLoggedIn = user.username !== undefined;
     
     return (<UserContext.Provider value={{ user, setUser, isLoggedIn }}>
         {props.children}

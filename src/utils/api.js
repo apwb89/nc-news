@@ -14,3 +14,14 @@ export const getArticles = () => {
         return data.articles;
     })
 }
+
+export const getUsers = () => {
+    return newsApi.get('/users')
+    .then(({ data }) => {
+        return data.usernames;
+    })
+}
+
+export const getTopics = () => {
+
+}

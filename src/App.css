@@ -4,7 +4,22 @@
   margin: 0;
 }
 
-.App {
-  text-align: center;
+.NavBar {
+  display: block;
 }
 
+nav > p {
+  background-color: blue;
+}
+
+ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  
+  .articles-page > h1 {
+    grid-area: top;
+  }
+}
