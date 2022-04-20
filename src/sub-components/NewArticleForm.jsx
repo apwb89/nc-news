@@ -1,10 +1,26 @@
 import { useContext } from 'react';
 import { UserContext } from '../contexts/User';
+import Expandable from './Expandable';
 
-const NewArticleForm = () => {
+const NewArticleForm = ({article_id}) => {
     const { user, setUser } = useContext(UserContext);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        return;
+    }
     
-    return <p>NewArticleForm</p>
+    return (
+        <>
+            <h4>Post New Article</h4>
+            <Expandable>
+                <form className='comment-form' onSubmit={handleSubmit}>
+                    <label></label>
+                </form>
+            </Expandable>
+        </>
+    )
 }
 
 export default NewArticleForm;

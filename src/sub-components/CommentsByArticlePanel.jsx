@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react';
 import { getArticleComments } from '../utils/api';
+import NewCommentForm from './NewCommentForm';
 
 const CommentsByArticlePanel = ({article_id}) => {
     const [ articleComments, setArticleComments ] = useState([]);
-
+    
     useEffect(() => {
         getArticleComments(article_id).then((response) => {
             setArticleComments(response)
         })
-    }, [article_id])
+    }, [article_id, setArticleComments])
 
     return (
         <>
         <h3>Comments</h3>
+        <NewCommentForm article_id={article_id} articleComments={articleComments} setArticleComments={setArticleComments}/>
         <ul>
             {articleComments.map((comment) => {
                 return (
