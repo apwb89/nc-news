@@ -10,14 +10,23 @@ import ProfileById from './pages/ProfileById';
 import Topics from './pages/Topics';
 import Users from './pages/Users';
 import NavBar from './sub-components/NavBar';
+import { getTopics } from './utils/api';
 
 function App() {
+  const [ topics, setTopics ] = useState([]);
+
+  useEffect(() => {
+    getTopics().then((response) => {
+        setTopics(response)
+    })
+}, [setTopics])
+
   
   return (
     <div className='App'>
       <NavBar />
       <Routes>
-        <Route path='/articles' element={<Articles className='page' />} />
+        <Route path='/articles' element={<Articles className='page' topics={topics} setTopics={setTopics}/>} />
         <Route path='/dashboard' element={<Dashboard className='page' />} />
         <Route
           path='/articles/:article_id'
@@ -28,7 +37,7 @@ function App() {
           path='/users/:username'
           element={<ProfileById className='page' />}
         />
-        <Route path='/topics' element={<Topics className='page' />} />
+        <Route path='/topics' element={<Topics className='page' topics={topics} setTopics={setTopics}/>} />
         <Route path='/users' element={<Users className='page' />} />
         <Route path='/' element={<Home />} />
       </Routes>

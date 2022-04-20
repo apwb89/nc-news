@@ -4,11 +4,10 @@ const newsApi = axios.create({
     baseURL: 'https://guarded-reaches-90042.herokuapp.com/api'
 });
 
-export const getArticles = () => {
-
+export const getArticles = (topicQuery) => {
     return newsApi.get('/articles', {
         params: {
-           
+           topic: topicQuery
         },
     }).then(({ data }) => {
         return data.articles;

@@ -1,14 +1,14 @@
 import  { getArticles } from '../utils/api'
 import { useState, useEffect } from 'react';
 
-const ArticlesPanel = () => {
+const ArticlesPanel = ({topicQuery}) => {
     const [ articles, setArticles ] = useState([]);
 
     useEffect(() => {
-        getArticles().then((response) => {
+        getArticles(topicQuery).then((response) => {
             setArticles(response)
         })
-    }, [setArticles])
+    }, [articles, topicQuery])
 
     return (
         <main>
