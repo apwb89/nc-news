@@ -10,7 +10,7 @@ const NavBar = () => {
 
     useEffect(() => {
 
-    }, [user, setUser])
+    }, [])
     
     const handleLogout = () => {
 
