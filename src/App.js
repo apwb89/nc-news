@@ -10,6 +10,7 @@ import ProfileById from './pages/ProfileById';
 import Topics from './pages/Topics';
 import Users from './pages/Users';
 import NavBar from './sub-components/NavBar';
+import Error from './sub-components/Error'
 import { getTopics } from './utils/api';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path='/topics' element={<Topics className='page' topics={topics} setTopics={setTopics}/>} />
         <Route path='/users' element={<Users className='page' />} />
         <Route path='/' element={<Home />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </div>
   );
