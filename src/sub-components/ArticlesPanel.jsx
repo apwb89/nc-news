@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 
 const ArticlesPanel = ({topicQuery}) => {
     const [ articles, setArticles ] = useState([]);
+    const [ articleError, setArticleError ] = useState()
 
+   
     useEffect(() => {
-        getArticles(topicQuery).then((response) => {
-            setArticles(response)
-        })
-    }, [articles, topicQuery])
-
+            getArticles(topicQuery).then((response) => {
+                setArticles(response);
+            })
+        }, [articles, topicQuery])
+   
     return (
         <main>
             <ul>

@@ -2,17 +2,26 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getArticleById } from '../utils/api';
 import CommentsByArticlePanel from '../sub-components/CommentsByArticlePanel';
+import Error from '../sub-components/Error';
 
 const IndividualArticle = () => {
     const [ article, setArticle ] = useState({});
+    const [error, setError] = useState(null);
+    
     const { article_id } = useParams();
 
     useEffect(() => {
         getArticleById(article_id).then((response) => {
             setArticle(response);
-            console.log(article)
+            setError(null)
+        }).catch((err) => {
+            setError({ err });
         })
     }, [article_id, article])
+
+    if(error) {
+        return <Error message={'That article does not exist 🤷'} />
+    }
 
     return (
         <>
