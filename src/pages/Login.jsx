@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import { UserContext } from '../contexts/User';
-import NavBar from '../sub-components/NavBar';
 import { useEffect} from 'react';
 import { getUsers } from '../utils/api';
 import { Button } from '@mui/material';
@@ -23,7 +22,7 @@ const Login = () => {
         //
         //
         //
-        console.log(event.target);
+        //console.log(event.target);
         
     }
 

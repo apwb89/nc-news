@@ -10,7 +10,7 @@ const NavBar = () => {
 
     useEffect(() => {
 
-    }, [user])
+    }, [user, setUser])
     
     const handleLogout = () => {
 
@@ -19,20 +19,20 @@ const NavBar = () => {
     if(!isLoggedIn) {
         return (
             <nav>
-                <Button variant="text" onCLick={() => navigate('/login')}>Log in</Button>
-                <Button variant="text" onCLick={() => navigate('/topics')}>Topics</Button>
-                <Button variant="text" onCLick={() => navigate('/articles')}>Articles</Button>
-                <Button variant="text" onCLick={() => navigate('/users')}>Users</Button>
+                <Button variant="text" onClick={() => navigate('/login')}>Log in</Button>
+                <Button variant="text" onClick={() => navigate('/topics')}>Topics</Button>
+                <Button variant="text" onClick={() => navigate('/articles')}>Articles</Button>
+                <Button variant="text" onClick={() => navigate('/users')}>Users</Button>
             </nav>
         )
     } else if (isLoggedIn) {
         return (
             <nav>
                 <p>Logged in as {user}</p>
-                <Button variant="text" onCLick={() => navigate('/dashboard')}>Dashboard</Button>
-                <Button variant="text" onCLick={() => navigate('/topics')}>Topics</Button>
-                <Button variant="text" onCLick={() => navigate('/articles')}>Articles</Button>
-                <Button variant="text" onCLick={() => navigate('/users')}>Users</Button>
+                <Button variant="text" onClick={() => navigate('/dashboard')}>Dashboard</Button>
+                <Button variant="text" onClick={() => navigate('/topics')}>Topics</Button>
+                <Button variant="text" onClick={() => navigate('/articles')}>Articles</Button>
+                <Button variant="text" onClick={() => navigate('/users')}>Users</Button>
                 <Button variant="text" onClick={handleLogout}>Log out</Button>
             </nav>
         )

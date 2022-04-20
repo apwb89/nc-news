@@ -23,5 +23,8 @@ export const getUsers = () => {
 }
 
 export const getTopics = () => {
-
+    return newsApi.get('/topics')
+    .then(({ data }) => {
+        return data.topics;
+    })
 }

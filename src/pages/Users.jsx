@@ -1,10 +1,8 @@
-import { useContext } from 'react';
-import { UserContext } from '../contexts/User';
+import { useState, useEffect } from 'react';
 
 const Users = () => {
-    const { user, setUser } = useContext(UserContext);
     
-    return <p>Users Page</p>
+    return <p>Users</p>
 }
 
 export default Users;

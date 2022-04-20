@@ -1,4 +1,3 @@
-import NavBar from '../sub-components/NavBar';
 import ArticlesPanel from '../sub-components/ArticlesPanel'
 
 const Articles = () => {

@@ -4,6 +4,14 @@
   margin: 0;
 }
 
+.App {
+  min-width: 300px;
+}
+
+h1, h2, h6 {
+  text-transform: capitalize;
+}
+
 .NavBar {
   display: block;
 }
@@ -17,7 +25,9 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
-  
+  .App {
+    width: auto;
+  }
   
   .articles-page > h1 {
     grid-area: top;
