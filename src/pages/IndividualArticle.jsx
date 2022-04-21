@@ -24,9 +24,9 @@ const IndividualArticle = () => {
     }, [article_id])
 
     const handleVote = (vote) => {
-        if(hasVoted) alert('You have already voted on this article');
-
-        if(!hasVoted) {
+        if(hasVoted) {
+            alert('You have already voted on this article');
+        } else {
             setVoteChange(vote);
             setHasVoted(true);
 
@@ -37,8 +37,6 @@ const IndividualArticle = () => {
                 setHasVoted(false);
             })
         }
-
-
     }
 
     if(error) {
