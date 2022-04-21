@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getArticleComments } from '../utils/api';
 import NewCommentForm from './NewCommentForm';
+import DeleteCommentButton from './DeleteCommentButton';
 
 const CommentsByArticlePanel = ({article_id}) => {
     const [ articleComments, setArticleComments ] = useState([]);
@@ -21,6 +22,7 @@ const CommentsByArticlePanel = ({article_id}) => {
                         <p>Created at: {comment.created_at}</p>
                         <h4>{comment.body}</h4>
                         <h6>Votes: {comment.votes}</h6><h6>By: {comment.author}</h6>
+                        <DeleteCommentButton username={comment.author} comment_id={comment.comment_id} setArticleComments={setArticleComments}/>
                     </li>
                 )
             })}

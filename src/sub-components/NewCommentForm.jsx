@@ -24,7 +24,7 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
             comment.body = commentBodyForm;
             comment.created_at = new Date().toString();
             comment.votes = 0;
-            comment.comment_id = currComments.length + 1;
+            comment.comment_id = 0;
             const commentsArr = [...currComments]
             commentsArr.unshift(comment)
             return commentsArr;
