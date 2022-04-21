@@ -56,3 +56,10 @@ export const voteArticle = (vote, article_id) => {
         return data.article;
     })
 }
+
+export const deleteComment = (comment_id) => {
+    return newsApi.delete(`/comments/${comment_id}`)
+    .then(({data}) => {
+        return data;
+    })
+}
