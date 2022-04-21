@@ -5,18 +5,14 @@ import { Button } from '@mui/material';
 import RandomArticleWidget from './RandomArticleWidget';
 
 const NavBar = () => {
-    const { user, setUser, isLoggedIn } = useContext(UserContext);
+    let { user, setUser } = useContext(UserContext);
     const navigate = useNavigate();
 
     useEffect(() => {
 
-    }, [])
+    }, [setUser])
     
-    const handleLogout = () => {
-
-    }
-    
-    if(!isLoggedIn) {
+    if(!user) {
         return (
             <nav>
                 <Button variant="text" onClick={() => navigate('/login')}>Log in</Button>
@@ -25,15 +21,15 @@ const NavBar = () => {
                 <Button variant="text" onClick={() => navigate('/users')}>Users</Button>
             </nav>
         )
-    } else if (isLoggedIn) {
+    } else if (user) {
         return (
             <nav>
-                <p>Logged in as {user}</p>
+                <h1>Logged in as {user}</h1>
                 <Button variant="text" onClick={() => navigate('/dashboard')}>Dashboard</Button>
                 <Button variant="text" onClick={() => navigate('/topics')}>Topics</Button>
                 <Button variant="text" onClick={() => navigate('/articles')}>Articles</Button>
                 <Button variant="text" onClick={() => navigate('/users')}>Users</Button>
-                <Button variant="text" onClick={handleLogout}>Log out</Button>
+                <Button variant="text" onClick={() => setUser('')}>Log out</Button>
             </nav>
         )
     }

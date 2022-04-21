@@ -5,7 +5,7 @@ import { getUsers } from '../utils/api';
 import { Button } from '@mui/material';
 
 const Login = () => {
-    const { user, setUser, isLoggedIn } = useContext(UserContext);
+    let { user, setUser } = useContext(UserContext);
     const [ userList, setUserList ] =  useState([]);
 
     useEffect(() => {
@@ -14,16 +14,8 @@ const Login = () => {
         })
     }, [setUserList])
 
-    const handleLogin = (event) => {
-
-        // fix 
-        //
-        //
-        //
-        //
-        //
-        //console.log(event.target);
-        
+    const handleLogin = (username) => {
+        setUser(username);
     }
 
         return (
@@ -33,7 +25,7 @@ const Login = () => {
                     {userList.map(user => {
                         return (
                             <li key={user.username}>{user.username}
-                                <Button variant="contained" onClick={handleLogin}>Log in</Button>
+                                <Button variant="contained" onClick={() => handleLogin(user.username)}>Log in</Button>
                             </li>
                         )
                     })}

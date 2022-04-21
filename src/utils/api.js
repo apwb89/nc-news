@@ -28,6 +28,13 @@ export const getArticleComments = (article_id) => {
     })
 }
 
+export const postComment = (article_id, postReq) => {
+    return newsApi.post(`/articles/${article_id}/comments`, postReq)
+    .then(({data}) => {
+        return data.comment;
+    })
+}
+
 export const getUsers = () => {
     return newsApi.get('/users')
     .then(({ data }) => {
