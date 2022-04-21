@@ -48,3 +48,11 @@ export const getTopics = () => {
         return data.topics;
     })
 }
+
+export const voteArticle = (vote, article_id) => {
+    const voteObj = {inc_votes: vote}
+    return newsApi.patch(`/articles/${article_id}`, voteObj)
+    .then(({data}) => {
+        return data.article;
+    })
+}

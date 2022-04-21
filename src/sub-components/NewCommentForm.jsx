@@ -25,7 +25,6 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
             comment.created_at = new Date().toString();
             comment.votes = 0;
             comment.comment_id = currComments.length + 1;
-            console.log(comment, 'comment obj')
             const commentsArr = [...currComments]
             commentsArr.unshift(comment)
             return commentsArr;
@@ -34,9 +33,8 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
         const postObj = {};
         postObj.body = commentBodyForm;
         postObj.name = user;
-        console.log(postObj, 'postObj')
         postComment(article_id, postObj).then((response) => {
-            console.log(response, 'post request response')
+            
         });
         setCommentBodyForm('')
     }
