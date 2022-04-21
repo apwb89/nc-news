@@ -12,15 +12,31 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (!commentBodyForm) {
+            alert('Comment cannot be empty')
+            return null
+        }
+
         setArticleComments((currComments) => {
-            return [ postObj, ...currComments];
+            const comment = {}
+            comment.author = user
+            comment.body = commentBodyForm;
+            comment.created_at = new Date().toString();
+            comment.votes = 0;
+            comment.comment_id = currComments.length + 1;
+            console.log(comment, 'comment obj')
+            const commentsArr = [...currComments]
+            commentsArr.unshift(comment)
+            return commentsArr;
         })
+        
         const postObj = {};
         postObj.body = commentBodyForm;
         postObj.name = user;
-        
+        console.log(postObj, 'postObj')
         postComment(article_id, postObj).then((response) => {
-            setArticleComments(response);
+            console.log(response, 'post request response')
         });
         setCommentBodyForm('')
     }

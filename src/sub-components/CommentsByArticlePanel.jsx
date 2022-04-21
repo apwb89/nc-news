@@ -4,12 +4,12 @@ import NewCommentForm from './NewCommentForm';
 
 const CommentsByArticlePanel = ({article_id}) => {
     const [ articleComments, setArticleComments ] = useState([]);
-    
     useEffect(() => {
         getArticleComments(article_id).then((response) => {
+            console.log(response, 'allcommentsgetresponse')
             setArticleComments(response)
         })
-    }, [article_id, setArticleComments])
+    }, [article_id])
 
     return (
         <>
