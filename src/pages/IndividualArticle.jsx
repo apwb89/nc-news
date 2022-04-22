@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getArticleById, voteArticle } from '../utils/api';
 import CommentsByArticlePanel from '../sub-components/CommentsByArticlePanel';
 import Error from '../sub-components/Error';
-import { Button } from '@mui/material'
+
 
 
 const IndividualArticle = () => {
@@ -49,8 +49,8 @@ const IndividualArticle = () => {
         <h1>{article.title}</h1>
         <h3>By {article.author}</h3>
         <h3>Votes: {article.votes + voteChange}</h3>
-        <Button onClick={() => handleVote(1)}>&uarr;</Button>
-        <Button onClick={() => handleVote(-1)}>&darr;</Button>
+        <button onClick={() => handleVote(1)}>&uarr;</button>
+        <button onClick={() => handleVote(-1)}>&darr;</button>
         <h2>{article.body}</h2>
         <h6>Comments :{article.comment_count}</h6>
         <CommentsByArticlePanel article_id={article_id} />

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Button } from '@mui/material';
 
 const Expandable = ({ children }) => {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -9,7 +8,7 @@ const Expandable = ({ children }) => {
     return (
         <>
             {isOpen && children}
-            <Button variant="text" onClick={toggleOpen}>{isOpen ? 'Hide' : 'View article...'}</Button>
+            <button variant="text" onClick={toggleOpen}>{isOpen ? 'Hide' : 'View article...'}</button>
         </>
     )
 }

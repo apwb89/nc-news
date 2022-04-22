@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import IndividualArticle from './pages/IndividualArticle';
 import Login from './pages/Login';
-import ProfileById from './pages/ProfileById';
+import ProfileByUsername from './pages/ProfileByUsername';
 import Topics from './pages/Topics';
 import Users from './pages/Users';
 import NavBar from './sub-components/NavBar';
@@ -36,7 +36,7 @@ function App() {
         <Route path='/login' element={<Login className='page' />} />
         <Route
           path='/users/:username'
-          element={<ProfileById className='page' />}
+          element={<ProfileByUsername className='page' />}
         />
         <Route path='/topics' element={<Topics className='page' topics={topics} setTopics={setTopics}/>} />
         <Route path='/users' element={<Users className='page' />} />

@@ -1,8 +1,12 @@
-import { useState, useEffect } from 'react';
-
+import UsersList from '../sub-components/UsersList';
 const Users = () => {
-    
-    return <p>Users</p>
+
+    return (
+        <>
+        <h1>Users</h1>
+        <UsersList />
+        </>
+    )
 }
 
 export default Users;

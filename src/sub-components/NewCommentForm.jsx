@@ -1,6 +1,5 @@
 import { useState, useContext } from 'react';
 import { UserContext } from '../contexts/User';
-import { Button } from '@mui/material'; 
 import { useNavigate } from 'react-router-dom';
 import { postComment } from '../utils/api';
 
@@ -40,7 +39,7 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
     }
     
     if (!user) {
-        return <Button type="contained" onClick={() => navigate('/login')}>Login to comment</Button>
+        return <button type="contained" onClick={() => navigate('/login')}>Login to comment</button>
     }
 
     return (
@@ -49,7 +48,7 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
                 Add new comment...
                 <input value={commentBodyForm} onChange={(event) => setCommentBodyForm(event.target.value)}/>
             </label>
-            <Button type='submit'>Add Comment</Button>
+            <button type='submit'>Add Comment</button>
         </form>
     )
 }

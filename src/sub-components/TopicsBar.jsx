@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import { Link } from 'react-router-dom'
 
 const TopicsBar = ({topics, setTopics}) => {
@@ -9,7 +8,7 @@ const TopicsBar = ({topics, setTopics}) => {
         {topics.map(topic => {
             return (
                 <Link key={topic.slug} to={`/articles?topic=${topic.slug}`}>
-                     <Button type='text'>{topic.slug}</Button>
+                     <button type='text'>{topic.slug}</button>
                  </Link>
             )
         })}

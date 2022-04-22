@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { UserContext } from '../contexts/User';
-import { Button } from '@mui/material';
 import { deleteComment } from '../utils/api';
 
 const DeleteCommentButton = ({username, comment_id, setArticleComments}) => {
@@ -21,7 +20,7 @@ const DeleteCommentButton = ({username, comment_id, setArticleComments}) => {
         return null;
     } 
     return (
-        <Button onClick={handleDeleteComment}>Delete Comment</Button>
+        <button onClick={handleDeleteComment}>Delete Comment</button>
     )
 }
 

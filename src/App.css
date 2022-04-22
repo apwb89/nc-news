@@ -1,5 +1,14 @@
+/* colours
+#E3E4DB
+#CDCDCD
+#AEA4BF
+#533A71
+#363732
+ */
+
+
 * {
-  border: black 1px solid;
+  /* border: black 1px solid; */
   padding: 0;
   margin: 0;
 }
@@ -12,12 +21,13 @@ h1, h2, h6 {
   text-transform: capitalize;
 }
 
-.NavBar {
+nav {
   display: block;
+  border: 0;
 }
 
-nav > p {
-  background-color: blue;
+nav > Button {
+
 }
 
 ul {

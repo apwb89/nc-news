@@ -2,7 +2,6 @@ import { useContext, useState } from 'react';
 import { UserContext } from '../contexts/User';
 import { useEffect} from 'react';
 import { getUsers } from '../utils/api';
-import { Button } from '@mui/material';
 
 const Login = () => {
     let { user, setUser } = useContext(UserContext);
@@ -25,7 +24,7 @@ const Login = () => {
                     {userList.map(user => {
                         return (
                             <li key={user.username}>{user.username}
-                                <Button variant="contained" onClick={() => handleLogin(user.username)}>Log in</Button>
+                                <button variant="contained" onClick={() => handleLogin(user.username)}>Log in</button>
                             </li>
                         )
                     })}

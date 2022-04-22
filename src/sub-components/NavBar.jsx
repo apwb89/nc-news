@@ -1,7 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/User';
-import { Button } from '@mui/material';
 import RandomArticleWidget from './RandomArticleWidget';
 
 const NavBar = () => {
@@ -15,21 +14,21 @@ const NavBar = () => {
     if(!user) {
         return (
             <nav>
-                <Button variant="text" onClick={() => navigate('/login')}>Log in</Button>
-                <Button variant="text" onClick={() => navigate('/topics')}>Topics</Button>
-                <Button variant="text" onClick={() => navigate('/articles')}>Articles</Button>
-                <Button variant="text" onClick={() => navigate('/users')}>Users</Button>
+                <button variant="text" onClick={() => navigate('/login')}>Log in</button>
+                <button variant="text" onClick={() => navigate('/topics')}>Topics</button>
+                <button variant="text" onClick={() => navigate('/articles')}>Articles</button>
+                <button variant="text" onClick={() => navigate('/users')}>Users</button>
             </nav>
         )
     } else if (user) {
         return (
             <nav>
                 <h1>Logged in as {user}</h1>
-                <Button variant="text" onClick={() => navigate('/dashboard')}>Dashboard</Button>
-                <Button variant="text" onClick={() => navigate('/topics')}>Topics</Button>
-                <Button variant="text" onClick={() => navigate('/articles')}>Articles</Button>
-                <Button variant="text" onClick={() => navigate('/users')}>Users</Button>
-                <Button variant="text" onClick={() => setUser('')}>Log out</Button>
+                <button variant="text" onClick={() => navigate('/bashboard')}>Dashboard</button>
+                <button variant="text" onClick={() => navigate('/bopics')}>Topics</button>
+                <button variant="text" onClick={() => navigate('/brticles')}>Articles</button>
+                <button variant="text" onClick={() => navigate('/bsers')}>Users</button>
+                <button variant="text" onClick={() => setUser('')}>Log out</button>
             </nav>
         )
     }
