@@ -4,7 +4,7 @@ import { getUserByUsername } from '../utils/api';
 import Error from '../sub-components/Error';
 
 const ProfileByUsername = () => {
-    const username = useParams();
+    const {username} = useParams();
     const [ userPageProfile, setUserPageProfile ] = useState({});
     const [ error, setError ] = useState(null);
 
