@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Expandable from './Expandable';
 
-const ArticlesPanel = ({topicQuery}) => {
+const ArticlesPanel = ({topicQuery, author}) => {
     const [ articles, setArticles ] = useState([]);
    
     useEffect(() => {
-            getArticles(topicQuery).then((response) => {
+            getArticles(topicQuery, author).then((response) => {
                 setArticles(response);
             })
-        }, [articles, topicQuery])
+        }, [articles, topicQuery, author])
    
     return (
         <main>
@@ -25,7 +25,7 @@ const ArticlesPanel = ({topicQuery}) => {
                             <Expandable>
                                 <h4>{article.body}</h4>
                             </Expandable>
-                            <h6>Author: {article.author}</h6><h6>Comments: {article.comment_count}</h6><h6>Votes: {article.votes}</h6>
+                            <Link to={`/users/${article.author}`}><h6>Author: {article.author}</h6></Link><h6>Comments: {article.comment_count}</h6><h6>Votes: {article.votes}</h6>
                         </li>
                    ) 
                 })}

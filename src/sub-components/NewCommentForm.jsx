@@ -12,11 +12,6 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (!commentBodyForm) {
-            alert('Comment cannot be empty')
-            return null
-        }
-
         setArticleComments((currComments) => {
             const comment = {}
             comment.author = user
@@ -46,7 +41,7 @@ const NewCommentForm = ({article_id, articleComments, setArticleComments}) => {
         <form onSubmit={handleSubmit}>
             <label>
                 Add new comment...
-                <input value={commentBodyForm} onChange={(event) => setCommentBodyForm(event.target.value)}/>
+                <input value={commentBodyForm} onChange={(event) => setCommentBodyForm(event.target.value)} required/>
             </label>
             <button type='submit'>Add Comment</button>
         </form>
