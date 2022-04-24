@@ -9,7 +9,7 @@ const Articles = ({topics, setTopics}) => {
     const topicQuery = searchParams.get('topic')
 
     return (
-        <section className='articles-page'>
+        <section className='background'>
             <TopicsBar topics={topics}/>
                 <NewArticleForm topics={topics}/>
             <h1>{topicQuery} Articles</h1>

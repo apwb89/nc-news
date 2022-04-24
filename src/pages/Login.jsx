@@ -21,7 +21,7 @@ const Login = () => {
     }
 
         return (
-            <main>
+            <main className='background'>
                 <h1>Login</h1>
                 <ul>
                     {userList.map(user => {

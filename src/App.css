@@ -40,6 +40,8 @@ h1 {
   box-shadow: 10px 10px #aea4bf;
 }
 
+/* --------------------------------------------------------------------------------- */
+
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -73,6 +75,19 @@ footer {
   background-color: #cdcdcd;
   text-align: center;
   display: grid;
+}
+
+.background > img {
+  padding: 20px;
+  border: #aea4bf solid;
+  background-color: #CDCDCD;
+  border-top-left-radius: 40px 120px;
+  border-top-right-radius: 120px 40px;
+  border-bottom-left-radius: 110px 40px;
+  border-bottom-right-radius: 120px 40px;
+  margin: 30px;
+  box-shadow: 10px 10px #aea4bf;
+  height: 200px;
 }
 
 .home-logo {
@@ -111,6 +126,8 @@ footer {
 ul {
   list-style: none;
 }
+
+
 
 
 

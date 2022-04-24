@@ -44,7 +44,7 @@ const IndividualArticle = () => {
     }
 
     return (
-        <>
+        <main className='background'>
         <h6>{article.topic}</h6><h6>Created at: {article.created_at}</h6>
         <h1>{article.title}</h1>
         <h3>By {article.author}</h3>
@@ -54,7 +54,7 @@ const IndividualArticle = () => {
         <h2>{article.body}</h2>
         <h6>Comments :{article.comment_count}</h6>
         <CommentsByArticlePanel article_id={article_id} />
-        </>
+        </main>
     )
 }
 

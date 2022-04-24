@@ -20,14 +20,14 @@ const Dashboard = () => {
 
 
     return (
-        <>
+        <main className='background'>
         <h1>Welcome back {user}</h1>
         <img src={yourProfile.avatar_url} alt={yourProfile.username} height='200px'/>
         <h5>Post New Article</h5>
         <NewArticleForm />
         <h2>Your Articles</h2>
         <ArticlesPanel author={yourProfile.username} />
-        </>
+        </main>
     )
 }
 

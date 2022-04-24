@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Topics = ({topics, setTopics}) => {
    
     return (
-        <>
+        <main className='background'>
         <h1>Topics</h1>
         <ul>
             {topics.map(topic => {
@@ -18,7 +18,7 @@ const Topics = ({topics, setTopics}) => {
             })}
         </ul>
         <NewTopicForm setTopics={setTopics}/>
-        </>
+        </main>
     )
 }
 

@@ -26,12 +26,12 @@ const ProfileByUsername = () => {
     if(!userPageProfile) <p>Loading...</p>
 
     return (
-        <>
+        <main className='background'>
         <h1>{username}'s Profile</h1>
         <img src={userPageProfile.avatar_url} alt={userPageProfile.username}/>
         <h4>Articles by {username}</h4>
         <ArticlesPanel author={username} />
-        </>
+        </main>
     )
 }
 
