@@ -3,7 +3,7 @@ const Users = () => {
 
     return (
         <main className='background'>
-            <h1>Users</h1>
+            <h1 className='user-header'>Users</h1>
             <UsersList />
         </main>
     )

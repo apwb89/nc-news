@@ -23,7 +23,7 @@ const Login = () => {
         return (
             <main className='background'>
                 <h1>Login</h1>
-                <ul>
+                <ul className='login-page-ul'>
                     {userList.map(user => {
                         return (
                             <li key={user.username}>{user.username}

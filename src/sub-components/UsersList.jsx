@@ -15,7 +15,7 @@ const UsersList = () => {
 
     return (
         <section className='Users'>
-        <ul>
+        <ul className='users-page-ul'>
             {users.map(user => {
                return <Link key={user.username} to={`/users/${user.username}`}><li >{user.username}</li></Link>
             })}
