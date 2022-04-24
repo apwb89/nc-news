@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const TopicsBar = ({topics, setTopics}) => {
+const TopicsBar = ({topics}) => {
  
     return (
         <>

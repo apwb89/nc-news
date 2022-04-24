@@ -1,4 +1,4 @@
-
+import NewTopicForm from '../sub-components/NewTopicForm';
 import { Link } from 'react-router-dom';
 
 
@@ -17,6 +17,7 @@ const Topics = ({topics, setTopics}) => {
                 )
             })}
         </ul>
+        <NewTopicForm setTopics={setTopics}/>
         </>
     )
 }

@@ -24,10 +24,10 @@ const NavBar = () => {
         return (
             <nav>
                 <h1>Logged in as {user}</h1>
-                <button variant="text" onClick={() => navigate('/bashboard')}>Dashboard</button>
-                <button variant="text" onClick={() => navigate('/bopics')}>Topics</button>
-                <button variant="text" onClick={() => navigate('/brticles')}>Articles</button>
-                <button variant="text" onClick={() => navigate('/bsers')}>Users</button>
+                <button variant="text" onClick={() => navigate('/dashboard')}>Dashboard</button>
+                <button variant="text" onClick={() => navigate('/topics')}>Topics</button>
+                <button variant="text" onClick={() => navigate('/articles')}>Articles</button>
+                <button variant="text" onClick={() => navigate('/users')}>Users</button>
                 <button variant="text" onClick={() => setUser('')}>Log out</button>
             </nav>
         )
