@@ -22,6 +22,20 @@ export const getArticleById = (article_id) => {
     })
 }
 
+export const postArticle = (article) => {
+    return newsApi.post('/articles', article)
+    .then(({data}) => {
+        return data.article;
+    })
+}
+
+export const deleteArticleById = (article_id) => {
+    return newsApi.delete(`/articles/${article_id}`)
+    .then(({data}) => {
+        return data;
+    })
+}
+
 export const getArticleComments = (article_id) => {
     return newsApi.get(`/articles/${article_id}/comments`)
     .then(({data}) => {
