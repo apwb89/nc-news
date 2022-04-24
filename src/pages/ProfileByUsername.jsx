@@ -10,7 +10,9 @@ const ProfileByUsername = () => {
 
     useEffect(() => {
         getUserByUsername(username).then((response) => {
-            
+            if(!response.avatar_url) {
+                response.avatar_url = '../imgs/avatar_placeholder';
+            }
             setUserPageProfile(response)
             setError(null)
         }).catch((err) => {
@@ -25,7 +27,7 @@ const ProfileByUsername = () => {
     return (
         <>
         <h1>{username}'s Profile</h1>
-
+        <img src={userPageProfile.avatar_url} alt={userPageProfile.username}/>
         </>
     )
 }

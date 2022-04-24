@@ -16,7 +16,7 @@ const UsersList = () => {
     return (
         <ul>
             {users.map(user => {
-               return <Link to={`/users/${user.username}`}><li key={user.username}>{user.username}</li></Link>
+               return <Link key={user.username} to={`/users/${user.username}`}><li >{user.username}</li></Link>
             })}
         </ul>
     )
