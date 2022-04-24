@@ -10,6 +10,11 @@ const NavBar = () => {
     useEffect(() => {
 
     }, [setUser])
+
+    const handleLogout = () => {
+        setUser('')
+        navigate('/');
+    }
     
     if(!user) {
         return (
@@ -28,7 +33,7 @@ const NavBar = () => {
                 <button variant="text" onClick={() => navigate('/topics')}>Topics</button>
                 <button variant="text" onClick={() => navigate('/articles')}>Articles</button>
                 <button variant="text" onClick={() => navigate('/users')}>Users</button>
-                <button variant="text" onClick={() => setUser('')}>Log out</button>
+                <button variant="text" onClick={handleLogout}>Log out</button>
             </nav>
         )
     }

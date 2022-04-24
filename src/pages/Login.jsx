@@ -2,9 +2,11 @@ import { useContext, useState } from 'react';
 import { UserContext } from '../contexts/User';
 import { useEffect} from 'react';
 import { getUsers } from '../utils/api';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     let { user, setUser } = useContext(UserContext);
+    const navigate = useNavigate();
     const [ userList, setUserList ] =  useState([]);
 
     useEffect(() => {
@@ -15,6 +17,7 @@ const Login = () => {
 
     const handleLogin = (username) => {
         setUser(username);
+        navigate('/dashboard');
     }
 
         return (

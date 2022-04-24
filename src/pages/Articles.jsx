@@ -1,4 +1,5 @@
-import ArticlesPanel from '../sub-components/ArticlesPanel'
+import ArticlesPanel from '../sub-components/ArticlesPanel';
+import NewArticleForm from '../sub-components/NewArticleForm';
 import TopicsBar from '../sub-components/TopicsBar';
 import { useSearchParams } from 'react-router-dom';
 
@@ -10,6 +11,7 @@ const Articles = ({topics, setTopics}) => {
     return (
         <section className='articles-page'>
             <TopicsBar topics={topics}/>
+                <NewArticleForm topics={topics}/>
             <h1>{topicQuery} Articles</h1>
             <ArticlesPanel topicQuery={topicQuery}/>
         </section>
