@@ -6,39 +6,119 @@
 #363732
  */
 
-
 * {
   /* border: black 1px solid; */
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
 }
 
 .App {
   min-width: 300px;
 }
 
-h1, h2, h6 {
+h1,
+h2,
+h6 {
   text-transform: capitalize;
 }
 
-nav {
-  display: block;
-  border: 0;
+h1 {
+  padding: 30px;
+  font-size: 8vh;
+  font-weight: bold;
+  all: unset;
+  padding: 20px;
+  border: #aea4bf solid;
+  background-color: #E3E4DB;
+  border-top-left-radius: 40px 120px;
+  border-top-right-radius: 120px 40px;
+  border-bottom-left-radius: 110px 40px;
+  border-bottom-right-radius: 120px 40px;
+  margin: 30px;
+  box-shadow: 10px 10px #aea4bf;
 }
 
-nav > Button {
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  border: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #533a71;
+}
 
+nav > button {
+  background-color: #aea4bf;
+  height: 80%;
+  width: 15%;
+  margin-top: 5px;
+}
+
+footer {
+  width: 100%;
+  background-color: #533a71;
+  height: 50px;
+}
+
+.logged-in-as {
+  color: #aea4bf;
+  margin-left: 10px;
+  height: 50%;
+  line-height: 50px;
+}
+
+.background {
+  background-color: #cdcdcd;
+  text-align: center;
+  display: grid;
+}
+
+.home-logo {
+  margin: auto;
+}
+
+.home-background > h1 {
+  padding: 30px;
+  font-size: 8vh;
+  font-weight: bold;
+  all: unset;
+  padding: 20px;
+  border: #aea4bf solid;
+  background-color: #CDCDCD;
+  border-top-left-radius: 40px 120px;
+  border-top-right-radius: 120px 40px;
+  border-bottom-left-radius: 110px 40px;
+  border-bottom-right-radius: 120px 40px;
+  margin: 30px;
+  box-shadow: 10px 10px #aea4bf;
+}
+
+.homepage-buttons > button {
+  all: unset;
+  padding: 20px;
+  border: #aea4bf solid;
+  background-color: #E3E4DB;
+  border-top-left-radius: 40px 120px;
+  border-top-right-radius: 120px 40px;
+  border-bottom-left-radius: 110px 40px;
+  border-bottom-right-radius: 120px 40px;
+  margin: 30px;
+  box-shadow: 10px 10px #aea4bf;
 }
 
 ul {
   list-style: none;
 }
 
+
+
 @media only screen and (min-width: 768px) {
   .App {
     width: auto;
   }
-  
+
   .articles-page > h1 {
     grid-area: top;
   }

@@ -14,11 +14,13 @@ const UsersList = () => {
     if(!users) <p>Loading...</p>
 
     return (
+        <section className='Users'>
         <ul>
             {users.map(user => {
                return <Link key={user.username} to={`/users/${user.username}`}><li >{user.username}</li></Link>
             })}
         </ul>
+        </section>
     )
 }
 

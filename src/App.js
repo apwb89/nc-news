@@ -12,6 +12,7 @@ import Users from './pages/Users';
 import NavBar from './sub-components/NavBar';
 import Error from './sub-components/Error'
 import { getTopics } from './utils/api';
+import Footbar from './sub-components/FootBar';
 
 function App() {
   const [ topics, setTopics ] = useState([]);
@@ -43,6 +44,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='*' element={<Error />} />
       </Routes>
+      <Footbar />
     </div>
   );
 }

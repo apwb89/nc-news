@@ -5,7 +5,7 @@ import { getUsers } from '../utils/api';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    let { user, setUser } = useContext(UserContext);
+    let { setUser } = useContext(UserContext);
     const navigate = useNavigate();
     const [ userList, setUserList ] =  useState([]);
 

@@ -6,7 +6,7 @@ import NewArticleForm from '../sub-components/NewArticleForm';
 import { getUserByUsername } from '../utils/api';
 
 const Dashboard = () => {
-    const { user, setUser } = useContext(UserContext);
+    const { user } = useContext(UserContext);
     const [ yourProfile, setYourProfile ] = useState({});
     const navigate = useNavigate();
     
