@@ -25,6 +25,7 @@ const NewTopicForm = ({setTopics}) => {
 
     return (
         <>
+        <section className="new-topic-form">
         <h2>Create New Topic</h2>
         <form onSubmit={handleSubmit}>
             <label>
@@ -37,6 +38,7 @@ const NewTopicForm = ({setTopics}) => {
             </label>
             <button type="submit">Submit</button>
         </form>
+        </section>
         </>
     )
 }

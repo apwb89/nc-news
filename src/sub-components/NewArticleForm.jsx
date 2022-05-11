@@ -40,7 +40,7 @@ const NewArticleForm = () => {
     }
     
     if (!user) {
-        return <button type="contained" onClick={() => navigate('/login')}>Login to write new article</button>
+        return <button className="log-in-to-write-article-button" type="contained" onClick={() => navigate('/login')}>Login to write new article</button>
     }
 
     return (

@@ -8,7 +8,7 @@ const Expandable = ({ children }) => {
     return (
         <>
             {isOpen && children}
-            <button variant="text" onClick={toggleOpen}>{isOpen ? 'Hide' : 'View article...'}</button>
+            <button variant="text" onClick={toggleOpen}>{isOpen ? 'Hide' : 'Expand article...'}</button>
         </>
     )
 }

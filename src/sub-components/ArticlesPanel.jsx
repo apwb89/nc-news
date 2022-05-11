@@ -18,7 +18,8 @@ const ArticlesPanel = ({topicQuery, author}) => {
             <ul>
                 {articles.map(article => {
                    return (
-                        <li key={article.article_id}>
+                       <section className='articles-list-element' key={article.article_id}>
+                        <li>
                             <h6>{article.topic}</h6>
                             <Link to={`/articles/${article.article_id}`}>
                             <h3>{article.title}</h3>
@@ -29,6 +30,7 @@ const ArticlesPanel = ({topicQuery, author}) => {
                             <Link to={`/users/${article.author}`}><h6>Author: {article.author}</h6></Link><h6>Comments: {article.comment_count}</h6><h6>Votes: {article.votes}</h6>
                             <DeleteArticleButton setArticles={setArticles} author={author} article_id={article.article_id}/>
                         </li>
+                        </section>
                    ) 
                 })}
             </ul>

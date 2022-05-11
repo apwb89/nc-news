@@ -4,14 +4,16 @@ const TopicsBar = ({topics}) => {
  
     return (
         <>
-        <p>Topics: </p>
+        <p className="topics-bar-header">Topics </p>
+        <section className='topics-bar-button-area'>
         {topics.map(topic => {
             return (
                 <Link key={topic.slug} to={`/articles?topic=${topic.slug}`}>
-                     <button type='text'>{topic.slug}</button>
+                     <button className='topic-button' type='text'>{topic.slug}</button>
                  </Link>
             )
         })}
+        </section>
         </>
     )
 }
