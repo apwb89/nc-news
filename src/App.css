@@ -158,6 +158,10 @@ footer {
   box-shadow: 4px 4px #aea4bf;
 }
 
+/*DASHBOARD--------------------------------------*/
+
+
+
 /* USERS--------------------------------------------------- */
 
 
@@ -228,6 +232,10 @@ footer {
 }
 
 /*ARTICLES-------------------------------------------------*/
+
+.articles-header {
+  text-transform: capitalize;
+}
 
 .articles-list-element > li {
   border: 2px grey dotted;

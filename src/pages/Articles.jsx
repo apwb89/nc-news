@@ -12,7 +12,7 @@ const Articles = ({topics, setTopics}) => {
         <section className='background'>
             <TopicsBar topics={topics}/>
                 <NewArticleForm topics={topics}/>
-            <h1>{topicQuery} Articles</h1>
+            <h1 className='articles-header'>{topicQuery} Articles</h1>
             <ArticlesPanel topicQuery={topicQuery}/>
         </section>
     )   
